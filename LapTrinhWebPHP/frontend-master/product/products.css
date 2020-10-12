@@ -1,0 +1,40 @@
+.bill-create {
+    margin: 77px 0 0 -20px;
+}
+
+.header-bill {
+    position: sticky;
+    top: 150px;
+}
+
+
+/* customer */
+
+.bill-info-container {
+    display: flex;
+    justify-content: center;
+}
+
+.customer-info-bill {
+    width: 50%;
+    padding: 0 10px;
+    border-right: 2px solid black;
+}
+
+.btn-custom {
+    width: 300px;
+    margin: 30px 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.customer-bill {
+    margin-top: 80px;
+}
+
+
+/* Add new product */
+
+#createProducts>label {
+    margin-top: 100px;
+}

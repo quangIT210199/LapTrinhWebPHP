@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../Libs/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./../Libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../index.css">
+    <link rel="stylesheet" href="./home.css">
+
+    <script src="./../Libs/js/jquery-3.2.1.min.js"></script>
+    <script src="./../Libs/js/bootstrap.min.js"></script>
+    <!-- File Profile của user -->
+    <script src="./../controller/User/profile.js"></script>
+    <title>Hello | QUANG SHOP</title>
+</head>
+
+<body>
+    <!-- <div class="main-background"></div> -->
+
+    <!-- Sidebar -->
+    <div class="sidenav text-center">
+        <div class="sidebar-logo">
+            <a href="/home/" class="logo"><h2 >Quang shop</h2></a>
+        </div>
+        <a href="http://127.0.0.1:5500/home" class="sidebar_item active"><img class="sidebar_item-icon"
+                src="./../images/white-home.png" width="24px" alt="Home">Tổng quan</a>
+                
+        <a href="http://127.0.0.1:5500/employee/employee.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-sell.png" width="24px" alt="">Nhân viên</a>
+        
+        <a href="http://127.0.0.1:5500/product/index.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-product.png" width="24px" alt="employee">Sản phẩm</a>
+
+        <a href="http://127.0.0.1:5500/Products/categories.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-storehouse.png" width="24px" alt="">Danh mục sản phẩm</a>    
+
+    </div>
+
+    <!-- main -->
+    <div class="main">
+        <!-- status bar -->
+        <nav class="profile-navbar">
+            <div class="profile">
+                <div class="profile_name">
+                    <span class="profile_title"></span><br>
+                    <small class="user_role"></small>
+                </div>
+            </div>
+            <button class="btn btn-black2white float-right"  id="btn-logout" onclick="logout()">Đăng xuất</button>
+        </nav>
+
+        <!-- content -->
+        <div class="content container-fluid">
+            <div class="row">
+                <!-- <h3 class="col-12 font-bold text-center">Biểu đồ tỷ trọng các sản phẩm</h3>
+                <div class="col-12">
+                    <canvas class="mt-40" id="pie_chart"></canvas>
+                </div>
+                <div class="col-12 mt-100">
+                    <canvas class="mt-40" id="radar_chart"></canvas>
+                </div> -->
+                <h4 class="col-12 font-bold text-center">Thông kê số lượng sản phẩm</h4>
+                <div class="col-12">
+                    <canvas class="mt-40" id="bar_chart"></canvas>
+                </div>
+                
+                <!-- <div class="col-12">
+                    <canvas class="mt-40" id="pieEm_chart"></canvas>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="./../Libs/js/chart.min.js"></script>
+
+    <script src="./home.js"></script>
+    <script src="./../index.js"></script>
+    
+    <script src="./../controller/Auth/logout.js"></script>
+</body>
+
+</html>

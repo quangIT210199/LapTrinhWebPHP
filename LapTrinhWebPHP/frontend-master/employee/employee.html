@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../Libs/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./../Libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../index.css">
+    <link rel="stylesheet" href="./employee.css">
+
+    <script src="./../Libs/js/jquery-3.2.1.min.js"></script>
+    <script src="./../Libs/js/bootstrap.min.js"></script>
+
+    <script src="./../controller/User/profile.js"></script>
+    <title>Quản lý nhân viên | QUANG SHOP</title>
+</head>
+
+<body>
+    <!-- <div class="main-background"></div> -->
+
+    <!-- Sidebar -->
+    <div class="sidenav text-center">
+        <div class="sidebar-logo">
+            <h2 class="logo">Quang shop</h2>
+        </div>>
+        <a href="http://127.0.0.1:5500/home/index.html" class="sidebar_item"><img class="sidebar_item-icon"
+            src="./../images/white-home.png" width="24px" alt="Home">Tổng quan</a>
+            
+    <a href="http://127.0.0.1:5500/employee/employee.html" class="sidebar_item active"><img class="sidebar_item-icon" src="./../images/white-sell.png" width="24px" alt="">Nhân viên</a>
+    
+    <a href="http://127.0.0.1:5500/Product/index.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-product.png" width="24px" alt="employee">Sản phẩm</a>
+
+    <a href="http://127.0.0.1:5500/Products/categories.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-storehouse.png" width="24px" alt="">Danh mục sản phẩm</a> 
+    </div>
+
+    <!-- main -->
+    <div class="main">
+        <!-- status bar -->
+        <nav class="profile-navbar">
+            <div class="profile">
+
+                <div class="profile_name">
+                    <span class="profile_title"></span><br>
+                    <small class="user_role"></small>
+                </div>
+            </div>
+            <button class="btn btn-black2white float-right"  id="btn-logout" onclick="logout()">Đăng xuất</button>
+        </nav>
+
+        <!-- content -->
+        <div class="content">
+
+            <div class="container m-0">
+                <div class="search-container position-fixed">
+                    <!-- search employee-->
+                    <input type="text" class="search col-6" id="searchEmployee" placeholder="Nhập mã nhân viên, tên nhân viên">
+                    <div class="col-6">
+                        <a href="createEmployee.html" class="btn btn-info btn-col-2" style="width: 30%;float: right;">Thêm nhân viên</a>
+                        <button type="button" class="btn btn-success" style="float: right;margin-right: 20px;" onclick="exportTableToExcel('tblData', 'members-data')">Xuất Excel</button>
+                    </div>
+
+                </div>
+
+                <!-- API result -->
+                <!-- <div class="row result-container">
+                </div> -->
+            </div>
+
+            <!-- create bill -->
+            <div class="bill-create">
+                <table class="table" id="tblData">
+                    <thead>
+                        <tr class="header-bill">
+                            <th scope="col" class="bg-dark">ID</th>
+                            <th scope="col" class="bg-dark">Tên</th>
+                            <th scope="col" class="bg-dark">Email</th>
+                            <th scope="col" class="bg-dark">Giới tính</th>
+                            <th scope="col" class="bg-dark">SĐT</th>
+                            <th scope="col" class="bg-dark">Ngày sinh</th>
+                            <th scope="col" class="bg-dark">Chức vụ</th>
+                            <th scope="col" class="bg-dark">Địa chỉ</th>
+                            <th scope="col" class="bg-dark">Chức năng</th>
+                            <th scope="col" class="bg-dark">Chức năng</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeList"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./../index.js"></script>
+    <script src="./employee.js"></script>
+    <!-- Controller view -->
+    <script src="./../controller/employee/employee_list.controller.js"></script>
+    <script src="./../controller/employee/delEmployee.controlles.js"></script>
+    <!-- Search fillter -->
+    <script src="./../controller/Search.controller.js"></script>
+    
+    <script src="./../controller/employee/editEm.controller.js"></script>
+    <!-- Logout -->
+    <script src="./../controller/Auth/logout.js"></script>
+    <!-- Excel -->
+    <script src="./../controller/Excel/excel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../Libs/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./../Libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../index.css">
+    <link rel="stylesheet" href="./products.css">
+    
+    <script src="./../Libs/js/jquery-3.2.1.min.js"></script>
+    <script src="./../Libs/js/bootstrap.min.js"></script>
+    <!-- File Profile của user -->
+    <script src="./../controller/User/profile.js"></script>
+    <title>Danh mục | QUANG SHOP</title>
+</head>
+
+<body>
+    <!-- <div class="main-background"></div> -->
+
+    <!-- Sidebar -->
+    <div class="sidenav text-center">
+        <div class="sidebar-logo">
+            <h2 class="logo">Quang shop</h2>
+        </div>>
+        <a href="http://127.0.0.1:5500/home" class="sidebar_item"><img class="sidebar_item-icon"
+            src="./../images/white-home.png" width="24px" alt="Home">Tổng quan</a>
+            
+        <a href="http://127.0.0.1:5500/employee/employee.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-sell.png" width="24px" alt="">Nhân viên</a>
+        
+        <a href="http://127.0.0.1:5500/Product/index.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-product.png" width="24px" alt="employee">Sản phẩm</a>
+
+        <a href="http://127.0.0.1:5500/Products/categories.html" class="sidebar_item active"><img class="sidebar_item-icon" src="./../images/white-storehouse.png" width="24px" alt="">Danh mục sản phẩm</a> 
+    </div>
+
+    <!-- main -->
+    <div class="main">
+        <!-- status bar -->
+        <nav class="profile-navbar">
+            <div class="profile">
+                <div class="profile_name">
+                    <span class="profile_title"></span><br>
+                    <small class="user_role"></small>
+                </div>
+            </div>
+            <button class="btn btn-black2white float-right"  id="btn-logout" onclick="logout()">Đăng xuất</button>
+        </nav>
+
+        <!-- content -->
+        <div class="content">
+
+            <div class="container m-0">
+                <div class="search-container position-fixed">
+                    <!-- search products -->
+                    <input type="text" class="search col-6" id="searchCate" placeholder="Nhập mã danh mục, tên danh mục">
+                    <div class="col-6">
+                        <a href="http://127.0.0.1:5500/Products/createCate.html" class="btn btn-info btn-col-2" style="width: 30%;float: right;">Thêm sản phẩm</a>
+                        <button type="button" class="btn btn-success" style="float: right;margin-right: 20px;" onclick="exportTableToExcel('tblData', 'members-data')">Xuất Excel</button>
+                    </div>
+
+                </div>
+
+                <!-- API result -->
+                <div class="row result-container"></div>
+            </div>
+
+            <!-- create bill -->
+            <div class="bill-create">
+                <table class="table" id="tblData">
+                    <thead>
+                        <tr class="header-bill">
+                            <th scope="col" class="bg-dark">STT</th>
+                            <th scope="col" class="bg-dark">Tên danh mục sản phẩm</th>
+                            <th scope="col" class="bg-dark">Mã danh mục sản phẩm</th>
+                            <th scope="col" class="bg-dark">Chức năng</th>
+                            <!-- <th scope="col" class="bg-dark">Chức năng</th> -->
+                        </tr>
+                    </thead>
+                    <tbody id="categoriesList"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./../index.js"></script>
+    <script src="./../controller/list_cates.controller.js"></script>
+    <script src="./../controller/delCate.controller.js"></script>
+
+    <script src="./../controller/Auth/logout.js"></script>
+    <!-- Excel -->
+    <script src="./../controller/Excel/excel.js"></script>
+</body>
+
+</html>

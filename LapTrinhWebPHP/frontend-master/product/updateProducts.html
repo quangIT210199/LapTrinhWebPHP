@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../Libs/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./../Libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../index.css">
+    <link rel="stylesheet" href="./products.css">
+    <title>Sửa phẩm | MANA SHOP</title>
+</head>
+
+<body>
+    <!-- <div class="main-background"></div> -->
+
+    <!-- Sidebar -->
+    <div class="sidenav text-center">
+        <div class="sidebar-logo">
+            <h2 class="logo">Mana shop</h2>
+        </div>>
+        
+    <a href="http://127.0.0.1:5500/home" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-home.png" width="24px" alt="Home">Tổng quan</a>
+            
+    <a href="http://127.0.0.1:5500/employee/employee.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-sell.png" width="24px" alt="">Nhân viên</a>
+    
+    <a href="http://127.0.0.1:5500/product/index.html" class="sidebar_item active"><img class="sidebar_item-icon" src="./../images/white-product.png" width="24px" alt="employee">Sản phẩm</a>
+
+    <a href="http://127.0.0.1:5500/Products/categories.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-storehouse.png" width="24px" alt="">Danh mục sản phẩm</a> 
+    </div>
+
+    <!-- main -->
+    <div class="main">
+        <!-- status bar -->
+        <nav class="profile-navbar">
+            <div class="profile">
+                <div class="profile_name">
+                    <span>Chào mừng Đậu Mòe quay trở lại!</span><br>
+                    <small>Nhân viên bán hàng</small>
+                </div>
+            </div>
+            <button class="btn btn-black2white float-right"  id="btn-logout" onclick="logout()">Đăng xuất</button>
+        </nav>
+
+        <!-- content -->
+        <div class="content">
+            <h3 class="header font-bold">Sửa sản phẩm</h3>
+            <form action="#" onsubmit="return editProduct()">
+                <div class="mt-40">
+                    <label for="pro_name">Tên sản phẩm</label>
+                    <input class="form-control" id="pro_name" type="text">
+                </div>
+                <div class="mt-40 w-49per inline-block">
+                    <label for="saleprice">Giá nhập vào</label>
+                    <input class="form-control" id="saleprice" type="number" placeholder="VNĐ">
+                </div>
+                <div class="mt-40 w-49per inline-block">
+                    <label for="purchaseprice">Giá bán ra</label>
+                    <input class="form-control" id="purchaseprice" type="number" placeholder="VNĐ">
+                </div>
+                <div class="mt-40 w-49per inline-block">
+                    <label for="quantity">Số lượng</label>
+                    <input class="form-control" id="quantity" type="number">
+                </div>
+                <div class="mt-40 w-49per inline-block">
+                    <label for="pro_image">Ảnh sản phẩm</label>
+                    <img id="proImg_preview" height="60px">
+                    <input class="form-control" id="pro_image" type="file" accept="image/*" onchange="previewFile()">
+                </div>
+                <div class="float-right mt-40">
+                    <button class="btn-black2white" type="submit">Sửa sản phẩm</button>
+                    <a href="/product/index.html"><button class="btn-white2black" type="button">Hủy</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./../Libs/js/jquery-3.2.1.min.js"></script>
+    <script src="./../Libs/js/bootstrap.min.js"></script>
+    <script src="./../index.js"></script>
+
+    <script src="./../controller/Products/pro_update.js"></script>
+    <!-- Logout -->
+    <script src="./../controller/Auth/logout.js"></script>
+</body>
+
+</html>

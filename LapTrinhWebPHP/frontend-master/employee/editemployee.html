@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../Libs/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./../Libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../index.css">
+    <link rel="stylesheet" href="./employee.css">
+
+    <script src="./../Libs/js/jquery-3.2.1.min.js"></script>
+    <!-- <script src="./../Libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script> -->
+    <script src="./../Libs/js/bootstrap.min.js "></script>
+    
+    <script src="./../controller/User/profile.js"></script>
+    <title>Sửa nhân viên | Quang SHOP</title>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidenav text-center">
+        <div class="sidebar-logo">
+            <h2 class="logo">Quang shop</h2>
+        </div>>
+        <a href="http://127.0.0.1:5500/home" class="sidebar_item active"><img class="sidebar_item-icon"
+            src="./../images/white-home.png" width="24px" alt="Home">Tổng quan</a>
+            
+    <a href="http://127.0.0.1:5500/employee/employee.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-sell.png" width="24px" alt="">Nhân viên</a>
+    
+    <a href="/Products/categories.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-product.png" width="24px" alt="employee">Sản phẩm</a>
+
+    <a href="/Products/categories.html" class="sidebar_item"><img class="sidebar_item-icon" src="./../images/white-storehouse.png" width="24px" alt="">Danh mục sản phẩm</a> 
+    </div>
+    <!-- main -->
+    <div class="main">
+        <!-- status bar -->
+        <nav class="profile-navbar">
+            <div class="profile">
+
+                <div class="profile_name">
+                    <span class="profile_title"></span><br>
+                    <small class="user_role"></small>
+                </div>
+            </div>
+            <button class="btn btn-black2white float-right"  id="btn-logout" onclick="logout()">Đăng xuất</button>
+        </nav>
+
+        <!-- content -->
+        <div class=" content">
+            <div class="addProducts">
+                <h3 class="addProduct_header">Sửa nhân viên</h3>
+                
+                <form action="#" onsubmit="return editEmployee()" id="createProduct">
+                    <!-- tên nv -->
+                    <label for="name" class="font-bold mt-30">Tên Nhân viên</label>
+                    <input class="form-control w-40per inline-block" id="name" type="text">
+                    <!-- email -->
+                    <label for="email" class="font-bold mt-30">Email</label>
+                    <input class="form-control w-40per inline-block" id="email" type="email">
+                    <!-- password -->
+                    <label for="password" class="font-bold mt-30">Mật khẩu</label>
+                    <input class="form-control w-40per inline-block" id="password" type="password">
+                    <!-- số đt -->
+                    <label for="phone" class="font-bold mt-30">Phone</label>                  
+                    <input class="form-control w-40per inline-block" id="phone" type="text">
+                    <br>
+                    <!-- date -->
+                    <label for="date" class="font-bold mt-30">Date</label>                  
+                    <input class="form-control w-40per inline-block" id="date" type="date">
+                    <!-- địa chỉ -->
+                    <label for="address" class="font-bold mt-30">Địa chỉ</label>                  
+                    <input class="form-control w-40per inline-block" id="address" type="text">
+                    <br>
+                    <!-- chức vụ -->
+                    <label for="role" class="font-bold mt-30">Chức vụ</label>
+                    <select class="browser-default custom-select" id="role">
+                        <option selected>Chọn chức vụ</option>
+                        <!-- <option value="Nhân viên bán hàng">Nhân viên bán hàng</option>
+                        <option value="Nhân viên quản lý kho">Nhân viên quản lý kho</option> -->
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="NV">NV</option>
+                    </select>
+                    <br>
+                    <!-- sex -->
+                    <label for="sex" class="font-bold mt-30">Giới tính</label>
+                    <select class="browser-default custom-select" id="sex">
+                        <option selected>Chọn giới tính</option>
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+
+                    <div class="float-right">
+                        <button class="btn btn-black2white mt-30" type="submit">Lưu</button>
+                        <a href="employee.html" class="btn btn-white2black pt-12 mt-30">Hủy</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./../index.js"></script>
+    <script src="./employee.js "></script>
+    <script src="./../controller/employee/editEm.controller.js "></script>
+
+    <script src="./../controller/Auth/logout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+    "name": "nhan/backend",
+    "description": "This is Backend CNPM",
+    "authors": [
+        {
+            "name": "nhanobasa",
+            "email": "nhan.itptit@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^5.2",
+        "vlucas/phpdotenv": "^5.0",
+        "php-http/message": "^1.8"
+    }
+}
